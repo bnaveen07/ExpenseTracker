@@ -2,10 +2,11 @@
 
 * {
   box-sizing: border-box;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 ::selection {
-  color: #3f3f3f;
+  color: #fff;
   background-color: #40005d;
 }
 
@@ -13,10 +14,6 @@
   width: 10px;
   color: #3f3f3f;
   background-color: #40005d;
-}
-
-html {
-  font-family: "Noto Sans JP", sans-serif;
 }
 
 body {

@@ -1,23 +1,34 @@
 import Expenses from './components/Expenses/Expenses';
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import NewExpense from './components/NewExpenses/NewExpenses';
 
 const DUMMY_DATA = [
 
 ];
 
+const getDataFromLS = () => {
+  const data = JSON.parse(localStorage.getItem('data'));
+  if (data) {
+    return JSON.parse(localStorage.getItem('data'));
+  }
+}
 
 
 function App() {
 
-  const [expenses, setExpenses] = useState(DUMMY_DATA);
+  const [expenses, setExpenses] = useState(getDataFromLS);
+
+  const data = expenses;
+  useEffect(() => {
+    localStorage.setItem('data', JSON.stringify(data));
+  }, [data]);
+
 
 
 
   const addExpenseHandler = expense => {
     setExpenses(prevExpenses => {
-      console.log(prevExpenses);
       return [expense, ...prevExpenses];
     });
   }
