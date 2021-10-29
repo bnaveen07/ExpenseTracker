@@ -6,6 +6,9 @@ import NewExpense from './components/NewExpenses/NewExpenses';
 const DUMMY_DATA = [
 
 ];
+
+
+
 function App() {
 
   const [expenses, setExpenses] = useState(DUMMY_DATA);
@@ -14,6 +17,7 @@ function App() {
 
   const addExpenseHandler = expense => {
     setExpenses(prevExpenses => {
+      console.log(prevExpenses);
       return [expense, ...prevExpenses];
     });
   }
