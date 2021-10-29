@@ -3,6 +3,7 @@ import './Expenses.css';
 import Card from '../UI/Card'
 import ExpensesFilter from '../ExpenseFilter/ExpenseFilter';
 import ExpensesList from './ExpensesList';
+import Chart from '../Chart/Chart';
 import ExpensesChart from './ExpensesChart';
 
 function Expenses(props) {
